@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wspolnota mieszkaniowa</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <div style="text-align: center">
+    <h1> Wspolnoty mieszkaniowe</h1>
+</div>
+
+    <div class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <ul class="navbar-nav mr-auto" style="margin: auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Wspolnoty</a>
+                <div class="dropdown-menu bg-light">
+                    <a class="dropdown-item" href="/addHouse">Dodanie wspolnoty</a>
+                    <a class="dropdown-item" href="/showHouse">Wyswietlenie wszystkich wspolnot</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Mieszkania</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/addApartament">Dodanie mieszkania</a>
+                    <a class="dropdown-item" href="/showApartament">Wyswietlenie wszystkich mieszkań</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Mieszkańcy</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/addInhabitant">Dodanie mieszkańca do mieszkania</a>
+                    <a class="dropdown-item" href="/showInhabitant">Wyswietlenie wszystkich mieszkań</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="flex-column">
+        <p style="padding-top: 10px">
+            Wspólnota mieszkaniowa (WM) – ogół właścicieli, których lokale wchodzą w skład określonej nieruchomości (zwykle jednego budynku wraz z otaczającym terenem).
+            Pojęcie wspólnoty mieszkaniowej wprowadziła ustawa o własności lokali z 24 czerwca 1994, która weszła w życie 1 stycznia 1995. Przepisy ustawy stanowią uszczegółowienie przepisów o współwłasności, które zawarte są w art. 195-221 Kodeksu cywilnego. Na początku lat 90. XX w. wraz z rozwojem przedsiębiorstw deweloperskich oraz prywatyzacji lokali należących m.in. do gmin i przedsiębiorstw państwowych wzrastała liczba budynków należących do wielu właścicieli (czasami kilkudziesięciu), a w konsekwencji wyzwań związanych z zarządzaniem tego typu nieruchomościami. Dlatego też niezbędne stało się wprowadzenie nowych uregulowań prawnych.
+
+            Wspólnota mieszkaniowa powstaje z mocy prawa z chwilą wyodrębnienia pierwszego lokalu. Powstają wówczas jakby dwie nieruchomości (posiadające odrębne księgi wieczyste): lokalowa i budynkowa. Z prawa własności nieruchomości lokalowej wynika prawo współwłasności nieruchomości budynkowej.</p>
+
+        <img src="/wspolnota mieszkaniowa.jpg" alt="wspolnota mieszkaniowa" style="display: block; margin: 0 auto" >
+    </div>
+</div>
+</body>
+</html>

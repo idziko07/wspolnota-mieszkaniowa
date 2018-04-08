@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wspolnota mieszkaniowa</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <div style="text-align: center">
+        <h1> Wspolnoty mieszkaniowe</h1>
+    </div>
+
+    <div class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <ul class="navbar-nav mr-auto" style="margin: auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown">Wspolnoty</a>
+                <div class="dropdown-menu bg-light">
+                    <a class="dropdown-item" href="/addHouse">Dodanie wspolnoty</a>
+                    <a class="dropdown-item" href="/showHouse">Wyswietlenie wszystkich wspolnot</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Mieszkania</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/addApartament">Dodanie mieszkania</a>
+                    <a class="dropdown-item" href="/showApartament">Wyswietlenie wszystkich mieszkań</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Mieszkańcy</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/addInhabitant">Dodanie mieszkańca do mieszkania</a>
+                    <a class="dropdown-item" href="/showInhabitant">Wyswietlenie wszystkich mieszkań</a>
+                </div>
+            </li>
+        </ul>
+    </div><br>
+
+    <div th:if="${error}"  class="alert alert-danger" >
+        <b><h6 th:text="${error}"></h6></b>
+    </div>
+
+    <div class="card-columns" >
+        <div class="card text-center bg-info text-white" th:each="apartament:${apartaments}">
+                <p class="card-textr" > Wspolnota:</p> <p th:text="${apartament.getHousingAssociation().name}"></p>
+                <p class="card-text">Numer mieszkania:   <p th:text="${apartament.number}"></p></p>
+                <a th:href="'/editApartment?id=' + ${apartament.id}"><img src="edit.png" alt="edit" align="left"></a>
+                <a th:href="'/deleteApartment?id=' + ${apartament.id}"><img src="delete.png" alt="delete" align="right"></a>
+                <a th:href="'/detailsApartment?id=' + ${apartament.id}"><img src="details.png" alt="details" align="center"></a>
+
+        </div>
+    </div>
+    <a href="/" ><img src="/home.png"></a></div>
+</body>
+</html>
