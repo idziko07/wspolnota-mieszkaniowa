@@ -48,7 +48,7 @@
 
     <div class="text-center" style="padding:10px">
         <h3 style="padding:10px">Dodaj mieszkańca: </h3>
-        <div action="/addInhabitantFinish" method="post" th:object="${inhabitant}">
+        <form action="/addInhabitantFinish" method="post" th:object="${inhabitant}">
             Imie:
             <input type="text" th:field="*{firstName}">
             Nazwisko:
@@ -64,7 +64,6 @@
                 </select><br><br>
 
             <input type="submit" value="dodaj" class="btn btn-success">
-        </div>
         </form>
     </div>
         <a href="/" ><img src="/home.png"></a>
